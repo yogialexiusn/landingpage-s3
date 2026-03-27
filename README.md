@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+Landing Page Deployment Project (React + AWS S3 + CI/CD) www.alexinai.online
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project ini merupakan simulasi deployment aplikasi landing page untuk kebutuhan industri.
+Aplikasi dibangun menggunakan React (Create React App), kemudian di-build menjadi static files dan di-deploy ke AWS S3.
+Selain itu, project ini sudah terintegrasi dengan CI/CD menggunakan GitHub Actions, sehingga proses build dan deployment dapat berjalan otomatis.
 
-## Available Scripts
 
-In the project directory, you can run:
+Teknologi yang Digunakan
+- React (Create React App)
+- Amazon Web Services (S3 untuk hosting static website)
+- GitHub Actions (CI/CD pipeline)
+- Node.js & npm
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Arsitektur Deployment
+Alur kerja project ini:
+1. Developer melakukan push ke repository
+2. GitHub Actions akan:
+  2a. Install dependencies
+  2b. Build project (npm run build)
+  2c. Deploy hasil build ke AWS S3
+  2d. S3 akan menyajikan website sebagai static hosting
+3. Akses ke website www.alexinai.online
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Cara Menjalankan Project Secara Lokal
+Pastikan sudah menginstall:
+Node.js
+npm / yarn
+1. Install Dependencies
+npm install
+2. Menjalankan Mode Development
+npm start
+Aplikasi akan berjalan di:
+- http://localhost:3000
+Auto reload jika ada perubahan kode
+- Menjalankan Testing
+npm test
+Menggunakan mode watch
+Berguna untuk memastikan aplikasi berjalan sesuai harapan
+- Build untuk Production
+npm run build
+Hasil build akan berada di folder:
+/build
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Keuntungan menggunakan S3:
+- Cepat dan scalable
+- Biaya rendah
+- Mudah dikombinasikan dengan CDN (CloudFront) 
+- CI/CD dengan GitHub Actions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Pipeline otomatis akan berjalan saat:
+Push ke branch main
+Proses CI/CD:
+Checkout code
+Install dependencies
+Build project
+Running Test
+Deploy ke S3
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project ini dibuat untuk:
+- Simulasi workflow industri (build & deploy)
+- Implementasi CI/CD sederhana
+- Praktik deployment static website ke cloud
+- Memahami pipeline otomatis menggunakan GitHub Actions
