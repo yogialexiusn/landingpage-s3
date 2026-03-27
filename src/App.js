@@ -37,13 +37,13 @@ function App() {
                     <Route path={'/'}>
                         <Route path={`indextwo`} element={<IndexTwo />} />
                         <Route path={`indexthree`} element={<IndexThree />} />
-                        <Route path={`home`} element={<IndexFour />} />
+                        <Route path={`/home`} element={<IndexFour />} />
                         <Route path={`indexfive`} element={<IndexFive />} />
                         <Route path={`indexsix`} element={<IndexSix />} />
                         <Route index element={<IndexFour />} />
                         <Route path='landing/news/detail/:id' element={<IndexNewsDetail />} />
-                        <Route path='news' element={<IndexNews />}></Route>
-                        <Route path='career' element={<IndexCareer />}></Route>
+                        <Route path='/news' element={<IndexNews />}></Route>
+                        <Route path='/career' element={<IndexCareer />}></Route>
                     </Route>
                     <Route path={`/pages`}>
                         <Route path='auths'>
