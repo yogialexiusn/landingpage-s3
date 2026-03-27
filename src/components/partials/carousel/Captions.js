@@ -9,7 +9,7 @@ const items = [
     {
         src: SlideA,
         altText: 'Slide 1',
-        captionHead: 'Digital Platform Leader for Intelligent Enterprise, build greater futures through innovation and collective knowledge.',
+        captionHead: 'Your Digital Platform Leader for Intelligent Enterprise, build greater futures through innovation and collective knowledge.',
         captionText: '',
     },
     {
